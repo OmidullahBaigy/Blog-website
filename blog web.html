@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog with Categories</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <h1>My Blog</h1>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </div>
+</nav>
+
+<!-- Post Form -->
+<div class="container">
+    <h2>Create Post</h2>
+    <div class="post-form">
+        <textarea id="postText" rows="3" placeholder="What's on your mind?"></textarea>
+        <input type="file" id="postImage" accept="image/*">
+        <select id="postCategory">
+            <option value="">Select Category</option>
+            <option value="News">News</option>
+            <option value="Tech">Tech</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Sports">Sports</option>
+        </select>
+        <button onclick="createPost()">Post</button>
+    </div>
+</div>
+
+<!-- Posts Container -->
+<div class="container">
+    <h2>Posts</h2>
+    <!-- Category Filter -->
+    <div class="category-filter">
+        <span class="category-label">Filter by Category:</span>
+        <select id="categoryFilter" onchange="filterPosts()">
+            <option value="">All</option>
+            <option value="News">News</option>
+            <option value="Tech">Tech</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Sports">Sports</option>
+        </select>
+    </div>
+    <div id="postsContainer">
+        <!-- Posts will appear here -->
+    </div>
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>
